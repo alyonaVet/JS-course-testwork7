@@ -1,6 +1,6 @@
 import React from 'react';
 import {MenuPosition} from '../../types.ts';
-import Position from '../Position/Position.tsx';
+import Position from './Position/Position.tsx';
 import './Menu.css';
 
 interface MenuProps {
