@@ -6,32 +6,22 @@
 
 .App {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.order-items {
-  width: 45%;
-}
-
-.items {
+.orders {
   display: flex;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  width: 225px;
 }
 
-.item-name {
-  width: 100px;
-}
-
-.deleteBtn {
-  border: none;
-  border-radius: 5px;
-  background-color: indianred;
-  padding: 5px 10px;
-  color: white;
-  cursor: pointer;
+.header h3 {
+  margin-top: 0;
 }
 
 
