@@ -24,9 +24,11 @@ const OrderList: React.FC<OrderProps> = ({menuPositions, deletePosition, addTota
 
         <div className="items" key={index}>
           <span className="item-name">{position.name}</span>
-          <Count itemCount={position.count}/>
-          <div>{position.price * position.count}</div>
-          <IncrementButton increment={()=>changeItemCount(index, 1)} decrement={()=> changeItemCount(index, -1)}/>
+          <div className="item-numbers">
+            <Count itemCount={position.count}/>
+            <div>{position.price * position.count}</div>
+          </div>
+          <IncrementButton increment={() => changeItemCount(index, 1)} decrement={()=> changeItemCount(index, -1)}/>
           <DeleteButton onClick={() => deletePosition(index)}/>
         </div>
       ))}
