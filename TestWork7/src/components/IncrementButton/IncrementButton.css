@@ -1,0 +1,17 @@
+.incrementBtn {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #CACFD2;
+  border-radius: 5px;
+  padding: 5px;
+  width: 40px;
+}
+
+.partBtn {
+  border: none;
+  background-color: transparent;
+}
+
+.plusBtn {
+  border-left: 1px solid #CACFD2;
+}
