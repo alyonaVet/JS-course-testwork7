@@ -8,6 +8,7 @@ import teaImage from './assets/tea.jpeg';
 import colaImage from './assets/cola.jpeg';
 import {useState} from 'react';
 import Menu from './components/Menu/Menu.tsx';
+import OrderList from './components/OrderList/OrderList.tsx';
 
 
 const App = () => {
@@ -36,21 +37,23 @@ const App = () => {
 
     setMenuPosition(menuPositionsCopy);
   };
+  const deletePosition = (index: number): void => {
+    setMenuPosition((prevMenuPosition) => {
+      return prevMenuPosition.filter((_, i) => i !== index);
+    });
+  };
 
+  const addTotalPrice = () => {
+    return menuPositions
+      .reduce((acc, position) => {
+        return acc + (position.price * position.count);
+      }, 0);
+  };
 
   return (
     <div className="App">
       <Menu positions={positions} addPosition={addPosition}/>
-      <div className="order-items">
-        {menuPositions.map((position, index) => (
-          <div className="items" key={index}>
-            <span className="item-name">{position.name}</span>
-            <div className="itemCount">x{position.count}</div>
-            <div>Price</div>
-            <button className="deleteBtn">Delete</button>
-          </div>
-        ))}
-      </div>
+      <OrderList menuPositions={menuPositions} deletePosition={deletePosition} addTotalPrice={addTotalPrice}/>
     </div>
   );
 };
