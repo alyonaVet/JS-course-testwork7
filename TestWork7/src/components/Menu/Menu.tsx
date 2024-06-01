@@ -1,12 +1,14 @@
 import React from 'react';
 import {MenuPosition, PositionCount} from '../../types.ts';
 import Position from '../Position/Position.tsx';
+import './Menu.css';
 
 interface MenuProps {
   positions: MenuPosition[];
   addPosition: (index: number) => void;
   menuPositions: PositionCount[];
 }
+
 const Menu: React.FC<MenuProps> = ({positions, addPosition,}) => {
   return (
     <div className="position-items">

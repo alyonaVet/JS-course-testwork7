@@ -1,0 +1,5 @@
+.position-items {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
