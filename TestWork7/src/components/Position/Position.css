@@ -1,0 +1,23 @@
+.positionBtn {
+  border: 1px solid #E5E7E9;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 270px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.positionImg {
+  width: 70px;
+  height: 70px;
+  padding: 6px;
+}
+
+.position-name {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
