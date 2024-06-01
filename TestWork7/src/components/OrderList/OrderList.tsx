@@ -1,10 +1,10 @@
 import React from 'react';
 import {MenuPosition} from '../../types.ts';
-import Count from '../Count/Count.tsx';
-import DeleteButton from '../DeleteButton/DeleteButton.tsx';
+import Count from './Count/Count.tsx';
+import DeleteButton from './DeleteButton/DeleteButton.tsx';
 import './OrderList.css';
-import Price from '../Price/Price.tsx';
-import IncrementButton from '../IncrementButton/IncrementButton.tsx';
+import Price from './Price/Price.tsx';
+import IncrementButton from './IncrementButton/IncrementButton.tsx';
 interface OrderProps {
   menuPositions: MenuPosition[];
   deletePosition: (index: number) => void;
