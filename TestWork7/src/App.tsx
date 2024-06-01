@@ -50,10 +50,24 @@ const App = () => {
       }, 0);
   };
 
+  const changeItemCount = (itemIndex:number, step:number) => {
+    const menuPositionsCopy = [...menuPositions];
+    if (menuPositionsCopy[itemIndex].count + step >= 1) {
+      menuPositionsCopy[itemIndex].count += step;
+      setMenuPosition(menuPositionsCopy);
+    }
+  }
+
   return (
     <div className="App">
-      <Menu positions={positions} addPosition={addPosition}/>
-      <OrderList menuPositions={menuPositions} deletePosition={deletePosition} addTotalPrice={addTotalPrice}/>
+      <div className="header">
+        <h3>Order details</h3>
+        <h3>Add Items</h3>
+      </div>
+      <div className="orders">
+        <Menu positions={positions} addPosition={addPosition}/>
+        <OrderList menuPositions={menuPositions} deletePosition={deletePosition} addTotalPrice={addTotalPrice} changeItemCount={changeItemCount}/>
+      </div>
     </div>
   );
 };
