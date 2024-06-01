@@ -37,6 +37,7 @@ const App = () => {
 
     setMenuPosition(menuPositionsCopy);
   };
+
   const deletePosition = (index: number): void => {
     setMenuPosition((prevMenuPosition) => {
       return prevMenuPosition.filter((_, i) => i !== index);
@@ -56,13 +57,13 @@ const App = () => {
       menuPositionsCopy[itemIndex].count += step;
       setMenuPosition(menuPositionsCopy);
     }
-  }
+  };
 
   return (
     <div className="App">
       <div className="header">
-        <h3>Order details</h3>
-        <h3>Add Items</h3>
+        <h3>Order details:</h3>
+        <h3>Add Items:</h3>
       </div>
       <div className="orders">
         <Menu positions={positions} addPosition={addPosition}/>
