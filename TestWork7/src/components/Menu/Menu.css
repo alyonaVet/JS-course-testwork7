@@ -1,5 +1,8 @@
 .position-items {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid #CACFD2;
+  border-radius: 10px;
+  padding: 10px;
 }

@@ -16,9 +16,9 @@ const Position: React.FC<Props> = ({className, type, name, price, image, onClick
       <div>
         <img src={image} alt={name} className="positionImg"/>
       </div>
-      <div>
+      <div className="position-item">
         <div className="position-name">{name}</div>
-        <div>Price: {price} KGS</div>
+        <div className="position-price">Price: {price} KGS</div>
       </div>
     </button>
   );
