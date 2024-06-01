@@ -1,12 +1,11 @@
 import React from 'react';
-import {MenuPosition, PositionCount} from '../../types.ts';
+import {MenuPosition} from '../../types.ts';
 import Position from '../Position/Position.tsx';
 import './Menu.css';
 
 interface MenuProps {
   positions: MenuPosition[];
-  addPosition: (index: number) => void;
-  menuPositions: PositionCount[];
+  addPosition: (position: MenuPosition) => void;
 }
 
 const Menu: React.FC<MenuProps> = ({positions, addPosition,}) => {
@@ -20,7 +19,7 @@ const Menu: React.FC<MenuProps> = ({positions, addPosition,}) => {
           price={position.price}
           image={position.image}
           type="button"
-          onClick={() => addPosition(index)}
+          onClick={() => addPosition(position)}
         />
       ))}
     </div>
